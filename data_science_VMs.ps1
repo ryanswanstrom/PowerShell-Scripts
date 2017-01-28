@@ -15,12 +15,12 @@ Get-AzureRmSubscription
 # set variables for name and number of VMs, location
 $subscriptionName = ""  # this will need to be specified after running the above steps
 $location = "Central US" # change this based upon the above steps if you like
-$instructorName = ""  # this could also represent the training engagement, i.e. chicago
+$instructorName = ""  #use lowercase only, this could also represent the training engagement, i.e. chicago
 $vmUser = "someuser"
 $vmPassword = "Very-Strong45" # change this
 
 
-$numOfVMs = 2
+$numOfVMs = 3
 
 $randnum = get-random -minimum 1 -maximum 10000
 

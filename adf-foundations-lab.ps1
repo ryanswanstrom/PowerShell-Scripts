@@ -83,6 +83,8 @@ New-AzureRmDataFactoryDataset $df -File ($currentFolder + "\ADFGetStarted\AzureB
 # Create the Pipeline
 (Get-Content ($currentFolder + "\ADFGetStarted\MyFirstPipeline.txt")).replace('<storageaccountname>', $myStorageAccountName) | Set-Content ($currentFolder + "\ADFGetStarted\MyFirstPipeline.txt")
 New-AzureRmDataFactoryPipeline $df -File ($currentFolder + "\ADFGetStarted\MyFirstPipeline.txt")
+#rewrite the file to original for next time
+(Get-Content ($currentFolder + "\ADFGetStarted\MyFirstPipeline.txt")).replace($myStorageAccountName, '<storageaccountname>') | Set-Content ($currentFolder + "\ADFGetStarted\MyFirstPipeline.txt")
 
 
 # Monitor the Pipleline
